@@ -97,7 +97,7 @@ class Chomp_button(Button):
 			return 0
 
 
-		return int(str(current_value)[:-1])
+		return int(str(int(current_value))[:-1])
 
 
 class Reverso_button(Button):
@@ -166,7 +166,7 @@ class Sum_button(Button):
 		if(current_value != int(current_value)):
 			raise ValueError("Error - float is not summable")
 
-		return sum(int(digit) for digit in str(current_value))
+		return sum(int(digit) for digit in str(int(current_value)))
 
 
 def string_to_button(raw):
